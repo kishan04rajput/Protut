@@ -9,7 +9,7 @@ const Section2 = () => {
     "https://www.youtube.com/embed/J1qsrBl_CR0?autoplay=1&mute=1";
 
   const [playingVideo, setPlayingVideo] = useState(null);
-  const [player, setPlayer] = useState(null);
+  // const [player, setPlayer] = useState(null);
   //try
 
   useEffect(()=>{
@@ -49,30 +49,30 @@ const Section2 = () => {
     document.getElementById("fourthvideo").classList.add("bg-blue-700");
   }
 
-  useEffect(() => {
-    // Dynamically load YouTube Player API script
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  // useEffect(() => {
+  //   // Dynamically load YouTube Player API script
+  //   const tag = document.createElement('script');
+  //   tag.src = 'https://www.youtube.com/iframe_api';
+  //   const firstScriptTag = document.getElementsByTagName('script')[0];
+  //   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // Callback function when YouTube Player API script is loaded
-    window.onYouTubeIframeAPIReady = () => {
-      setPlayer(new window.YT.Player('videopart', {
-        events: {
-          'onStateChange': (event) => onPlayerStateChange(event, 'videopart')
-        }
-      }));
-      console.log("YouTube Player API script loaded!");
-    };
-  }, []);
+  //   // Callback function when YouTube Player API script is loaded
+  //   window.onYouTubeIframeAPIReady = () => {
+  //     setPlayer(new window.YT.Player('videopart', {
+  //       events: {
+  //         'onStateChange': (event) => onPlayerStateChange(event, 'videopart')
+  //       }
+  //     }));
+  //     console.log("YouTube Player API script loaded!");
+  //   };
+  // }, []);
 
-  const onPlayerStateChange = (event, iframeId) => {
-    if (iframeId === 'videopart' && event.data === window.YT.PlayerState.ENDED) {
-      // Video has stopped playing
-      console.log('Video stopped');
-    }
-  };
+  // const onPlayerStateChange = (event, iframeId) => {
+  //   if (iframeId === 'videopart' && event.data === window.YT.PlayerState.ENDED) {
+  //     // Video has stopped playing
+  //     console.log('Video stopped');
+  //   }
+  // };
 
 
 
