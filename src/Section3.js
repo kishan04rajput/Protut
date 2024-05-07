@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 const Section3 = () => {
-  const firstVideoLink = "https://www.youtube.com/embed/xuP4g7IDgDM?autoplay=1&mute=1";
+  const firstVideoLink =
+    "https://www.youtube.com/embed/xuP4g7IDgDM?autoplay=1&mute=1";
   const secondVideoLink =
     "https://www.youtube.com/embed/y1ITlvCq5Ro?autoplay=1&mute=1";
-  const thirdVideoLink = "https://www.youtube.com/embed/q1vN28g7OhI?autoplay=1&mute=1";
+  const thirdVideoLink =
+    "https://www.youtube.com/embed/q1vN28g7OhI?autoplay=1&mute=1";
   const fourthVideoLink =
     "https://www.youtube.com/embed/J1qsrBl_CR0?autoplay=1&mute=1";
 
@@ -47,7 +49,7 @@ const Section3 = () => {
   }
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="text-center">
       <div className="flex flex-1 gap-1">
         <button
           id="tab1"
@@ -87,7 +89,12 @@ const Section3 = () => {
           allowFullScreen
           title="steps"
         ></iframe>
-        <a href={playingVideo} target="_blank" className="self-center" rel="noreferrer">
+        <a
+          href={playingVideo}
+          target="_blank"
+          className="self-center"
+          rel="noreferrer"
+        >
           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded h-min">
             Get Started &rarr;
           </button>

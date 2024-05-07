@@ -1,7 +1,7 @@
 const Section4 = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-      <div style={{ alignSelf: "center" }}>
+    <div className="flex justify-evenly">
+      <div className="self-center">
         <button class="flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           <i class="fas fa-house"></i>
           <span class="ml-2">Company Name</span>
@@ -9,7 +9,7 @@ const Section4 = () => {
         <p class="text-lg text-center text-green-500 font-bold">
           Let's grow together!
         </p>
-        <div style={{ display: "flex", gap: "1vw" }}>
+        <div className="flex gap-2">
           <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
             <i class="fa-brands fa-facebook"></i>
           </a>
