@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
 
 const Section2 = () => {
-  const firstVideoLink = "https://www.youtube.com/embed/xuP4g7IDgDM?autoplay=1&mute=1";
+  const firstVideoLink =
+    "https://www.youtube.com/embed/xuP4g7IDgDM?autoplay=1&mute=1";
   const secondVideoLink =
     "https://www.youtube.com/embed/y1ITlvCq5Ro?autoplay=1&mute=1";
-  const thirdVideoLink = "https://www.youtube.com/embed/q1vN28g7OhI?autoplay=1&mute=1";
+  const thirdVideoLink =
+    "https://www.youtube.com/embed/q1vN28g7OhI?autoplay=1&mute=1";
   const fourthVideoLink =
     "https://www.youtube.com/embed/J1qsrBl_CR0?autoplay=1&mute=1";
 
   const [playingVideo, setPlayingVideo] = useState(null);
-  // const [player, setPlayer] = useState(null);
-  //try
 
-  useEffect(()=>{
+  useEffect(() => {
     handleFirstVideoButton();
-    // document.getElementById("videopart").play();
-  },[]);
+  }, []);
 
   function handleFirstVideoButton() {
     setPlayingVideo(firstVideoLink);
@@ -49,37 +48,10 @@ const Section2 = () => {
     document.getElementById("fourthvideo").classList.add("bg-blue-700");
   }
 
-  // useEffect(() => {
-  //   // Dynamically load YouTube Player API script
-  //   const tag = document.createElement('script');
-  //   tag.src = 'https://www.youtube.com/iframe_api';
-  //   const firstScriptTag = document.getElementsByTagName('script')[0];
-  //   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  //   // Callback function when YouTube Player API script is loaded
-  //   window.onYouTubeIframeAPIReady = () => {
-  //     setPlayer(new window.YT.Player('videopart', {
-  //       events: {
-  //         'onStateChange': (event) => onPlayerStateChange(event, 'videopart')
-  //       }
-  //     }));
-  //     console.log("YouTube Player API script loaded!");
-  //   };
-  // }, []);
-
-  // const onPlayerStateChange = (event, iframeId) => {
-  //   if (iframeId === 'videopart' && event.data === window.YT.PlayerState.ENDED) {
-  //     // Video has stopped playing
-  //     console.log('Video stopped');
-  //   }
-  // };
-
-
-
   return (
     <div>
       <div className="text-center">
-      <h2 className="text-2xl font-bold">Here's is how it works</h2>
+        <h2 className="text-2xl font-bold">Here's is how it works</h2>
         <p>Start a free trail &rarr;</p>
       </div>
       <div className="flex justify-evenly">

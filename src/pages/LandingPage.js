@@ -8,7 +8,7 @@ import Section4 from "../Section4";
 
 const LandingPage = ()=>{
   return(
-    <div style={{"display":"flex", "flexDirection":"column", "gap":"2vh"}}>
+    <div className="flex flex-col gap-6">
         <div id="navbar">
           <NavBar />
         </div>
